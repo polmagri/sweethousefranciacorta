@@ -106,6 +106,34 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   .intro,.where{grid-template-columns:1fr}
   body{font-size:16px}
 }
+.mbar{display:none}
+@media (max-width:760px){
+  .hero{min-height:0;padding-bottom:44vw}
+  .hero-inner{padding:92px 20px 0}
+  .place{margin-bottom:12px}
+  .hero h1{font-size:clamp(46px,14vw,72px)}
+  .hero p.lead{margin:20px 0 26px}
+  .hero .btn{display:block;text-align:center}
+  .hills{height:46vw}
+  .lang{right:14px}
+  section{padding:56px 20px}
+  .gallery .wrap{padding:0 20px}
+  .track{padding:0 20px 10px;scroll-padding:0 20px;gap:12px}
+  .slide{width:80vw}
+  .gal-nav{display:none}
+  .facts b{font-size:19px}
+  .facts li{padding:14px 0}
+  .amen-list li{padding-bottom:18px}
+  .dist li{grid-template-columns:4.8em 1fr}
+  .contact-links{flex-direction:column;align-items:stretch}
+  .btn-out{text-align:center}
+  .wa-float{display:none}
+  .mbar{display:flex;gap:10px;align-items:center;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--plum-deep);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+  .mbar-book{flex:1;text-align:center;padding:13px 16px}
+  .mbar-wa{flex:0 0 50px;height:50px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  footer .wrap{flex-direction:column}
+}
 </style>
 </head>
 <body>
@@ -139,16 +167,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <section>
     <div class="wrap intro">
       <div>
-        <h2 data-it="La casa" data-en="The apartment">La casa</h2>
+        <h2 data-it="🏡 La casa" data-en="🏡 The apartment">🏡 La casa</h2>
         <p data-it="La Sweet House è al primo piano di un piccolo condominio di sole sei unità, ristrutturato con gusto moderno. È un posto tranquillo, con vista sulle colline, dove riposare bene dopo una giornata di shopping, lavoro o escursioni." data-en="Sweet House is on the first floor of a small building with just six units, renovated in a modern style. It's a quiet place with views of the hills, where you can rest well after a day of shopping, work or exploring.">La Sweet House è al primo piano di un piccolo condominio di sole sei unità, ristrutturato con gusto moderno. È un posto tranquillo, con vista sulle colline, dove riposare bene dopo una giornata di shopping, lavoro o escursioni.</p>
         <p data-it="È adatta a coppie, famiglie o piccoli gruppi fino a quattro persone, e a chi è in trasferta di lavoro nella zona di Brescia." data-en="It suits couples, families or small groups of up to four, and anyone travelling for work around Brescia.">È adatta a coppie, famiglie o piccoli gruppi fino a quattro persone, e a chi è in trasferta di lavoro nella zona di Brescia.</p>
       </div>
       <ul class="facts">
-        <li><span data-it="Ospiti" data-en="Guests">Ospiti</span><b data-it="fino a 4" data-en="up to 4">fino a 4</b></li>
-        <li><span data-it="Camera" data-en="Bedroom">Camera</span><b data-it="1 matrimoniale" data-en="1 double">1 matrimoniale</b></li>
-        <li><span data-it="Soggiorno" data-en="Living room">Soggiorno</span><b data-it="divano letto" data-en="sofa bed">divano letto</b></li>
-        <li><span data-it="Parcheggio" data-en="Parking">Parcheggio</span><b data-it="gratuito" data-en="free">gratuito</b></li>
-        <li><span data-it="Outlet Village" data-en="Outlet Village">Outlet Village</span><b data-it="a piedi" data-en="on foot">a piedi</b></li>
+        <li><span data-it="👥 Ospiti" data-en="👥 Guests">👥 Ospiti</span><b data-it="fino a 4" data-en="up to 4">fino a 4</b></li>
+        <li><span data-it="🛏️ Camera" data-en="🛏️ Bedroom">🛏️ Camera</span><b data-it="1 matrimoniale" data-en="1 double">1 matrimoniale</b></li>
+        <li><span data-it="🛋️ Soggiorno" data-en="🛋️ Living room">🛋️ Soggiorno</span><b data-it="divano letto" data-en="sofa bed">divano letto</b></li>
+        <li><span data-it="🚗 Parcheggio" data-en="🚗 Parking">🚗 Parcheggio</span><b data-it="gratuito" data-en="free">gratuito</b></li>
+        <li><span data-it="🛍️ Outlet Village" data-en="🛍️ Outlet Village">🛍️ Outlet Village</span><b data-it="a piedi" data-en="on foot">a piedi</b></li>
       </ul>
     </div>
   </section>
@@ -157,7 +185,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <section class="gallery" aria-label="Foto">
     <div class="wrap">
       <div class="gal-head">
-        <h2 data-it="Le foto" data-en="Photos">Le foto</h2>
+        <h2 data-it="📸 Le foto" data-en="📸 Photos">📸 Le foto</h2>
         <div class="gal-nav">
           <button type="button" class="gal-btn" data-dir="-1" aria-label="Foto precedente">&#8592;</button>
           <button type="button" class="gal-btn" data-dir="1" aria-label="Foto successiva">&#8594;</button>
@@ -177,16 +205,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   </section>
   <section class="amen">
     <div class="wrap">
-      <h2 data-it="Cosa trovi in casa" data-en="What's inside">Cosa trovi in casa</h2>
+      <h2 data-it="✨ Cosa trovi in casa" data-en="✨ What's inside">✨ Cosa trovi in casa</h2>
       <ul class="amen-list">
-        <li><strong data-it="Cucina ampia e completa" data-en="Large, fully equipped kitchen">Cucina ampia e completa</strong><span data-it="Fornelli a gas, forno, microonde, macchina del caffè e tostapane." data-en="Gas hob, oven, microwave, coffee machine and toaster.">Fornelli a gas, forno, microonde, macchina del caffè e tostapane.</span></li>
-        <li><strong data-it="Maxi schermo" data-en="Big screen TV">Maxi schermo</strong><span data-it="Netflix e Prime Video inclusi, con un divano comodo." data-en="Netflix and Prime Video included, with a comfy sofa.">Netflix e Prime Video inclusi, con un divano comodo.</span></li>
-        <li><strong data-it="Aria condizionata" data-en="Air conditioning">Aria condizionata</strong><span data-it="Climatizzatore nuovo ed efficiente." data-en="New, efficient A/C unit.">Climatizzatore nuovo ed efficiente.</span></li>
-        <li><strong data-it="Bagno spazioso" data-en="Spacious bathroom">Bagno spazioso</strong><span data-it="Con doccia emozionale." data-en="With a rain shower.">Con doccia emozionale.</span></li>
-        <li><strong data-it="Ampio balcone arredato" data-en="Large furnished balcony">Ampio balcone arredato</strong><span data-it="Per la colazione all'aperto o un aperitivo. Si può fumare." data-en="For breakfast outdoors or an aperitivo. Smoking allowed.">Per la colazione all'aperto o un aperitivo. Si può fumare.</span></li>
-        <li><strong data-it="Ellittica" data-en="Elliptical trainer">Ellittica</strong><span data-it="A disposizione gratuitamente, per allenarti anche in viaggio." data-en="Free to use, so you can keep training while away.">A disposizione gratuitamente, per allenarti anche in viaggio.</span></li>
-        <li><strong data-it="Kit di benvenuto" data-en="Welcome kit">Kit di benvenuto</strong><span data-it="Asciugamani, spazzolino, tè e caffè inclusi." data-en="Towels, toothbrush, tea and coffee included.">Asciugamani, spazzolino, tè e caffè inclusi.</span></li>
-        <li><strong data-it="Parcheggio gratuito" data-en="Free parking">Parcheggio gratuito</strong><span data-it="Ampio, adatto anche a furgoni, van e camper." data-en="Plenty of space, also for vans and campers.">Ampio, adatto anche a furgoni, van e camper.</span></li>
+        <li><strong data-it="🍳 Cucina ampia e completa" data-en="🍳 Large, fully equipped kitchen">🍳 Cucina ampia e completa</strong><span data-it="Fornelli a gas, forno, microonde, macchina del caffè e tostapane." data-en="Gas hob, oven, microwave, coffee machine and toaster.">Fornelli a gas, forno, microonde, macchina del caffè e tostapane.</span></li>
+        <li><strong data-it="📺 Maxi schermo" data-en="📺 Big screen TV">📺 Maxi schermo</strong><span data-it="Netflix e Prime Video inclusi, con un divano comodo." data-en="Netflix and Prime Video included, with a comfy sofa.">Netflix e Prime Video inclusi, con un divano comodo.</span></li>
+        <li><strong data-it="❄️ Aria condizionata" data-en="❄️ Air conditioning">❄️ Aria condizionata</strong><span data-it="Climatizzatore nuovo ed efficiente." data-en="New, efficient A/C unit.">Climatizzatore nuovo ed efficiente.</span></li>
+        <li><strong data-it="🚿 Bagno spazioso" data-en="🚿 Spacious bathroom">🚿 Bagno spazioso</strong><span data-it="Con doccia emozionale." data-en="With a rain shower.">Con doccia emozionale.</span></li>
+        <li><strong data-it="🌿 Ampio balcone arredato" data-en="🌿 Large furnished balcony">🌿 Ampio balcone arredato</strong><span data-it="Per la colazione all'aperto o un aperitivo. Si può fumare." data-en="For breakfast outdoors or an aperitivo. Smoking allowed.">Per la colazione all'aperto o un aperitivo. Si può fumare.</span></li>
+        <li><strong data-it="🏋️ Ellittica" data-en="🏋️ Elliptical trainer">🏋️ Ellittica</strong><span data-it="A disposizione gratuitamente, per allenarti anche in viaggio." data-en="Free to use, so you can keep training while away.">A disposizione gratuitamente, per allenarti anche in viaggio.</span></li>
+        <li><strong data-it="🧴 Kit di benvenuto" data-en="🧴 Welcome kit">🧴 Kit di benvenuto</strong><span data-it="Asciugamani, spazzolino, tè e caffè inclusi." data-en="Towels, toothbrush, tea and coffee included.">Asciugamani, spazzolino, tè e caffè inclusi.</span></li>
+        <li><strong data-it="🅿️ Parcheggio gratuito" data-en="🅿️ Free parking">🅿️ Parcheggio gratuito</strong><span data-it="Ampio, adatto anche a furgoni, van e camper." data-en="Plenty of space, also for vans and campers.">Ampio, adatto anche a furgoni, van e camper.</span></li>
       </ul>
     </div>
   </section>
@@ -194,30 +222,30 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <section>
     <div class="wrap where">
       <div>
-        <h2 data-it="Dove siamo" data-en="Location">Dove siamo</h2>
+        <h2 data-it="📍 Dove siamo" data-en="📍 Location">📍 Dove siamo</h2>
         <p data-it="A Rodengo Saiano, alle porte della Franciacorta. Le piste ciclabili attraversano vigneti e colline fino al Lago d'Iseo, e i borghi e le cantine della zona sono a pochi minuti." data-en="In Rodengo Saiano, at the gateway to Franciacorta. Cycle paths run through vineyards and hills all the way to Lake Iseo, and the area's villages and wineries are a few minutes away.">A Rodengo Saiano, alle porte della Franciacorta. Le piste ciclabili attraversano vigneti e colline fino al Lago d'Iseo, e i borghi e le cantine della zona sono a pochi minuti.</p>
         <p data-it="A piedi trovi il supermercato Conad, un outlet dolciario, Tigotà e tutti i bar e ristoranti dell'Outlet Village." data-en="Within walking distance: a Conad supermarket, a confectionery outlet, Tigotà, and all the bars and restaurants of the Outlet Village.">A piedi trovi il supermercato Conad, un outlet dolciario, Tigotà e tutti i bar e ristoranti dell'Outlet Village.</p>
         <a class="link" href="https://www.google.com/maps/search/?api=1&query=Via+dell%27Agricoltura+2%2C+25050+Rodengo+Saiano+BS" target="_blank" rel="noopener" data-it="Apri su Google Maps" data-en="Open in Google Maps">Apri su Google Maps</a>
       </div>
       <ul class="dist">
-        <li><em data-it="a piedi" data-en="walk">a piedi</em><span>Franciacorta Outlet Village</span></li>
-        <li><em>10 min</em><span data-it="Brescia, in auto" data-en="Brescia, by car">Brescia, in auto</span></li>
-        <li><em>10 min</em><span data-it="Lago d'Iseo, in auto" data-en="Lake Iseo, by car">Lago d'Iseo, in auto</span></li>
-        <li><em data-it="in bici" data-en="by bike">in bici</em><span data-it="Vigneti e cantine della Franciacorta" data-en="Franciacorta vineyards and wineries">Vigneti e cantine della Franciacorta</span></li>
+        <li><em data-it="a piedi" data-en="walk">a piedi</em><span>🛍️ Franciacorta Outlet Village</span></li>
+        <li><em>10 min</em><span data-it="🏙️ Brescia, in auto" data-en="🏙️ Brescia, by car">🏙️ Brescia, in auto</span></li>
+        <li><em>10 min</em><span data-it="🌊 Lago d'Iseo, in auto" data-en="🌊 Lake Iseo, by car">🌊 Lago d'Iseo, in auto</span></li>
+        <li><em data-it="in bici" data-en="by bike">in bici</em><span data-it="🍇 Vigneti e cantine della Franciacorta" data-en="🍇 Franciacorta vineyards and wineries">🍇 Vigneti e cantine della Franciacorta</span></li>
       </ul>
     </div>
   </section>
 
   <section class="book">
     <div class="wrap">
-      <h2 data-it="Prenota il tuo soggiorno" data-en="Book your stay">Prenota il tuo soggiorno</h2>
+      <h2 data-it="🗓️ Prenota il tuo soggiorno" data-en="🗓️ Book your stay">🗓️ Prenota il tuo soggiorno</h2>
       <p data-it="Scegli le date e vedi subito disponibilità e prezzo." data-en="Pick your dates to see availability and price right away.">Scegli le date e vedi subito disponibilità e prezzo.</p>
       <a class="btn" href="https://brixia-apartments.alberga.ai/sweet_house_franciacorta/booking" target="_blank" rel="noopener" data-it="Verifica disponibilità e prenota" data-en="Check availability and book">Verifica disponibilità e prenota</a>
       <div class="contact">
-        <p data-it="Hai domande? Scrivici." data-en="Questions? Get in touch.">Hai domande? Scrivici.</p>
+        <p data-it="💬 Hai domande? Scrivici." data-en="💬 Questions? Get in touch.">💬 Hai domande? Scrivici.</p>
         <div class="contact-links">
-          <a class="btn-out" href="https://wa.me/393483708687" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn-out" href="mailto:paolomagribrescia@gmail.com">paolomagribrescia@gmail.com</a>
+          <a class="btn-out" href="https://wa.me/393483708687" target="_blank" rel="noopener">📱 WhatsApp</a>
+          <a class="btn-out" href="mailto:paolomagribrescia@gmail.com">✉️ paolomagribrescia@gmail.com</a>
         </div>
       </div>
     </div>
@@ -228,6 +256,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="#fff" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3.2 29l7.3-1.9c1.8 1 3.9 1.5 5.9 1.5h.1c7 0 12.7-5.7 12.7-12.7C29.2 8.7 23.1 3 16 3zm0 23.3c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.3 1.1 1.2-4.2-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.2 9.8 10 5.1 16 5.1c5.9 0 10.9 4.8 10.9 10.6 0 5.9-4.9 10.6-10.9 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.9-.9-3.1-1.7-4.4-3.8-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
 </a>
 
+
+<nav class="mbar" aria-label="Prenotazione rapida">
+  <a class="btn mbar-book" href="https://brixia-apartments.alberga.ai/sweet_house_franciacorta/booking" target="_blank" rel="noopener" data-it="📅 Prenota ora" data-en="📅 Book now">📅 Prenota ora</a>
+  <a class="mbar-wa" href="https://wa.me/393483708687" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="#fff" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3.2 29l7.3-1.9c1.8 1 3.9 1.5 5.9 1.5h.1c7 0 12.7-5.7 12.7-12.7C29.2 8.7 23.1 3 16 3zm0 23.3c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.3 1.1 1.2-4.2-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.2 9.8 10 5.1 16 5.1c5.9 0 10.9 4.8 10.9 10.6 0 5.9-4.9 10.6-10.9 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.9-.9-3.1-1.7-4.4-3.8-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  </a>
+</nav>
 <footer>
   <div class="wrap">
     <span>Sweet House Franciacorta · Rodengo Saiano (BS)</span>
